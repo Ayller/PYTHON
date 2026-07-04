@@ -2,7 +2,7 @@ import os
 
 from flask import Flask
 
-from controllers import cinema_bp, dashboard_bp
+from controllers import api_v1_bp, cinema_bp, dashboard_bp
 from dados_iniciais import popular_dados
 from models import db
 
@@ -23,6 +23,7 @@ def criar_app():
     db.init_app(app)
     app.register_blueprint(dashboard_bp)
     app.register_blueprint(cinema_bp)
+    app.register_blueprint(api_v1_bp)
 
     with app.app_context():
         db.create_all()
