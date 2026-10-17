@@ -1,0 +1,12 @@
+# Ambientes virtuais locais
+venv/
+.venv/
+env/
+
+# Cache do Python e do Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Configurações locais de assistentes
+.claude/
